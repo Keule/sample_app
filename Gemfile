@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
+gem 'pg', '0.12.2'
 gem 'bootstrap-sass', '2.1'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
@@ -15,9 +16,9 @@ group :development, :test do
   gem "wirble"
   gem "hirb"
   gem "awesome_print"
-  # gem 'guard-rspec', '1.2.1'
-  # gem 'guard-spork', '1.2.0'  
-  # gem 'spork', '0.9.2'
+  gem 'guard-rspec', '1.2.1'
+  gem 'guard-spork', :github => 'guard/guard-spork'   
+  gem 'spork', '0.9.2'
 end
 
 # Gems used only for assets and not required
@@ -34,8 +35,8 @@ group :test do
   gem 'cucumber-rails', '1.2.1', :require => false
   gem 'database_cleaner', '0.7.0'
   # gem 'launchy', '2.1.0'
-  # gem 'rb-fsevent', '0.9.1', :require => false
-  # gem 'growl', '1.0.3'
+  gem 'rb-inotify', '0.8.8'
+  gem 'libnotify', '0.5.9'
 end
 
 group :production do
